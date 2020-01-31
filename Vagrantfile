@@ -5,7 +5,7 @@ Vagrant.configure("2") do |config|
   clientInit = %(
     {
       "advertise_addr": "#{winClientIP}",
-      "retry_join": ["#{serverIp}"],
+      "retry_join": ["#{serverIP}"],
       "data_dir": "C:\\\\Consul\\\\data"
     }
   )

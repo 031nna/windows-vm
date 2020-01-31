@@ -16,8 +16,10 @@ Vagrant.configure("2") do |config|
   config.vm.hostname = "host-win"
   config.vm.provision "shell", path: "provision.ps1"
   config.vm.network "private_network", ip: winClientIP
-
-  config.ssh.username = "vagrant"
-  config.ssh.password = "vagrant"
-  # config.ssh.insert_key = false
+  #
+  # commented out the default settings to allow for auto-run.
+  # comment out  "config.ssh.insert_key".
+  # config.ssh.username = "vagrant"
+  # config.ssh.password = "vagrant"
+  config.ssh.insert_key = false
 end
